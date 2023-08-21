@@ -1,0 +1,89 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('bg.jpeg'); /* Replace with your image's file path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    .pending-tasks,
+    .completed-tasks {
+        margin-top: 20px; /* Adjust spacing as needed */
+    }
+    /* You can add more specific styles for smaller screens here */
+}
+
+
+.tasks {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+li span {
+    padding-right: 10px; /* Adjust this value to control the space */
+}
+
+.complete-button,
+.delete-button {
+    margin-right: 15px; 
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #02356c;
+}
+@media (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center elements horizontally */
+    }
+
+    /* Adjust individual element styles as needed */
+    h1 {
+        font-size: 24px; /* Decrease font size for headings */
+    }
+    li span {
+        font-size: 14px;
+        padding-right: 5px; /* Adjust this value for spacing */
+    }
+
+    /* Increase button padding for touch devices */
+    button {
+        padding: 10px 20px;
+    }
+}
